@@ -1,0 +1,39 @@
+﻿<%@ Master Language="VB" CodeFile="ChemistMaster.master.vb" Inherits="ChemistMaster" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Chemist  </title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background:url(bkg-blu.jpg) no-repeat;background-size:100%; height: 528px; width: 100%;">
+    <form id="form1" runat="server">
+    <div>
+        <table>
+            <tr>
+                <td>
+                    <asp:Menu ID="navMenu" runat="server" BackColor="#007FFF"  BorderColor="#0066CC" 
+                        StaticMenuItemStyle-ForeColor="#FFFFFF" StaticMenuItemStyle-VerticalPadding="10px"
+                        StaticMenuItemStyle-HorizontalPadding="10px"
+                        RenderingMode="Table" Orientation="Horizontal" Height="45px" Width="1350px">
+                    <Items>
+                     <asp:MenuItem Text ="Pharmacy Account" NavigateUrl="PharmacyAccount.aspx"/>
+                     <asp:MenuItem Text ="Item Master" NavigateUrl="ItemMaster.aspx"/>
+                     <asp:MenuItem Text="Purchase Order" NavigateUrl="PharmacyPurchaseOrder.aspx"/>
+                     <asp:MenuItem Text="Purchased Received" NavigateUrl="PharmacyPurchaseReceived.aspx"/>
+                     <asp:MenuItem Text ="Logout" NavigateUrl="PharmacyLogout.aspx"/>
+                    </Items>
+                    </asp:Menu>
+                </td>
+             </tr>
+            <tr>
+                <td>
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

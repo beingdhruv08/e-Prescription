@@ -1,0 +1,37 @@
+﻿<%@ Master Language="VB" CodeFile="DoctorMaster.master.vb" Inherits="DoctorMaster" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Doctor Master Page</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background:url(bkg-blu.jpg) no-repeat;background-size:100%; height: 528px; width: 600px;">
+    <form id="form1" runat="server">
+    <div>
+        <table>
+            <tr>
+                <td colspan="2" align="center">
+                    <asp:Menu align="center" ID="navMenu" runat="server" BackColor="#007FFF" BorderColor="#0066CC" 
+                        StaticMenuItemStyle-ForeColor="#FFFFFF" StaticMenuItemStyle-VerticalPadding="10px"
+                        StaticMenuItemStyle-HorizontalPadding="10px"
+                        RenderingMode="Table" Orientation="Horizontal" Height="45px" Width="1350px">
+                        <Items>
+                            <asp:MenuItem Text="Doctor Account" NavigateUrl="DoctorAccount.aspx"/>
+                            <asp:MenuItem Text="Patient Details" NavigateUrl="PatientDetails.aspx"/>
+                            <asp:MenuItem Text="Logout" NavigateUrl="Logout.aspx"/>
+                        </Items>
+                    </asp:Menu>
+                </td>
+             </tr>
+            <tr>
+                <td>
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
